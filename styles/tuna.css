@@ -1,0 +1,781 @@
+/* Importacion de fuentes */
+
+@font-face {
+    font-family: "Ruritania";
+    src: url("./fuentes/ruritania/Ruritania.ttf");
+}
+
+@font-face {
+    font-family: "AppleGaramond";
+    src: url("./fuentes/apple_garamond/AppleGaramond.ttf");
+}
+
+@font-face {
+    font-family: "AppleGaramondBold";
+    src: url("./fuentes/apple_garamond/AppleGaramond-Bold.ttf");
+}
+
+@font-face {
+    font-family: "AppleGaramondLight";
+    src: url("./fuentes/apple_garamond/AppleGaramond-Light.ttf");
+}
+
+@font-face {
+    font-family: "Gotemika";
+    src: url("./fuentes/gotemika/FTP - Gotemika.otf");
+}
+
+
+/* Estilos a nivel global */
+
+* {
+    margin: 0 auto;
+}
+
+#contenedor {
+    width: 1100px;
+    margin: 0 auto;
+    ;
+}
+
+body {
+    font-family: "Garamond";
+    font-size: 11pt;
+    color: #013850;
+    background-color: rgb(255, 255, 255);
+}
+
+p {
+    margin-top: 8px;
+}
+
+
+/* Estilos imágenes */
+
+figure {
+    margin-bottom: 20px;
+}
+
+
+/* Estilos pie de foto */
+
+figure figcaption {
+    color: #013850;
+    font-style: italic;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+/* Estilos cabecera */
+
+header {
+    width: 100%;
+}
+
+
+/* Estilos navegación */
+
+header nav {
+    width: 100%;
+    margin: 20px auto;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    background-color: #e8ad00;
+    float: left;
+}
+
+header nav ul {
+    overflow: hidden;
+    list-style: none;
+}
+
+header nav ul li {
+    float: left;
+}
+
+header nav ul li:hover {
+    box-shadow: 0px 1px 6px -1px black;
+}
+
+header nav ul li a {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #013850;
+    padding: 9px;
+    display: block;
+    text-decoration: none;
+    font-size: inherit;
+}
+
+header nav ul li span {
+    margin-right: 10px;
+}
+
+header nav ul li a:hover {
+    color: #01415c;
+    /*background: #c29a27;*/
+    background-color: #e8ad00;
+}
+
+
+/*header nav ul li .active {
+    background: orange;
+	font-weight:bold;
+}*/
+
+header nav ul li:hover .children {
+    display: block;
+}
+
+header nav ul li .children {
+    display: none;
+    background-color: #ffffff;
+    position: absolute;
+    /*width: 28%;*/
+    z-index: 2;
+    padding: 0;
+}
+
+header nav ul li .children li {
+    display: block;
+    overflow: hidden;
+}
+
+header nav ul li .children li a {
+    display: block;
+}
+
+header nav ul li .children li a:hover,
+header nav ul li a:hover {
+    color: #ffffff;
+    background: #01415c;
+}
+
+
+/*header nav ul li .children li .active {
+    background: orange;
+	font-weight:bold;
+}*/
+
+header nav ul li .children li a span {
+    float: right;
+    position: relative;
+    top: 3px;
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+#cabecera {
+    background-image: url("../images/cabecera3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.foto-cabecera {
+    height: 200px;
+    /*background-image: url("../images/cabecera_marca_agua.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 40px;*/
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+figure.foto-cabecera img {
+    width: 151px;
+    height: 151px !important;
+}
+
+.titulo {
+    font-size: 25pt;
+    font-family: serif;
+    color: rgb(1, 65, 92);
+    text-align: center;
+    -moz-transform: matrix( 1.30707316827968, 0, 0, 1.19914969566943, 0, 0);
+    -webkit-transform: matrix( 1.30707316827968, 0, 0, 1.19914969566943, 0, 0);
+    -ms-transform: matrix( 1.30707316827968, 0, 0, 1.19914969566943, 0, 0);
+    width: 577px;
+    font-weight: bold;
+    max-width: 730px;
+    line-height: 80px;
+    margin-right: 3em;
+}
+
+#titulo-nav {
+    display: none;
+}
+
+
+/* Estilos sección principal y artículos */
+
+section {
+    width: 820px;
+    margin-right: 20px;
+    float: left;
+}
+
+section article {
+    width: 835px;
+    float: left;
+    border: 1px solid #01415c;
+    color: #013850;
+    margin: 40px 0px;
+}
+
+article header {
+    width: 815px;
+    padding: 10px;
+    background-color: #01415c;
+    color: #ffdd6e;
+    margin-bottom: 1em;
+}
+
+article figure {
+    float: left;
+    padding-top: 20px;
+    padding-right: 10px;
+}
+
+article a {
+    font-family: Open Sans;
+    font-size: 11pt;
+    color: #01415c;
+}
+
+article a header:hover {
+    color: #01415c;
+    background-color: #e8ad00;
+}
+
+section article p {
+    padding: 0 40px;
+    text-align: justify;
+    font-size: 12pt;
+}
+
+article audio {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+article video {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+article div {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Estilos barra lateral */
+
+aside {
+    width: 238px;
+    float: left;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 20px;
+    border: 1px solid #013850;
+}
+
+aside img {
+    width: 219px;
+    margin: 9px;
+}
+
+aside a {
+    font-weight: bold;
+    color: #013850
+}
+
+aside p {
+    margin: 9px;
+}
+
+
+/* Estilos pie de página */
+
+footer {
+    width: 1092px;
+    padding: 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #e8ad00;
+    color: #013850;
+    clear: both;
+    float: left;
+    font-weight: 600;
+    margin-top: 2em;
+}
+
+
+/* Oculta el menú si no es smartphone */
+
+.menu_bar {
+    display: none;
+}
+
+
+/* Mostrar el aside antes que la paginacion en version Web */
+
+.asidemobile {
+    display: none;
+}
+
+
+/* Estilos paginación */
+
+.paginacion {
+    margin: 20px 0;
+}
+
+.paginacion ul {
+    list-style: none;
+    text-align: center;
+}
+
+.paginacion ul li {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.paginacion ul li a {
+    display: block;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: black;
+    background-color: #e8ad00;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+
+/*.paginacion ul li a:hover {
+	color: darkslategrey;
+    background: yellow;
+}*/
+
+.paginacion ul li .active {
+    background: #013850;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+i.material-icons {
+    padding-right: 10px;
+    vertical-align: bottom;
+    font-size: 18pt;
+}
+
+.flip-box {
+    background-color: transparent;
+    border: 1px solid #f1f1f1;
+    perspective: 50px;
+}
+
+.flip-box-inner {
+    position: relative;
+    text-align: center;
+}
+
+.flip-box .flip-box-inner .flip-box-front:hover {
+    transform: rotate(360deg);
+}
+
+.flip-box-front {
+    color: black;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.flip-box-back {
+    background-color: #555;
+    color: white;
+    transform: rotate(360deg);
+}
+
+
+/* Efectos sobre imagenes "miembros" */
+
+.miembros {
+    width: 250px;
+    height: 530px;
+    float: left;
+    margin: 3px;
+    padding: 10px;
+    border: 1px solid goldenrod;
+}
+
+
+/* Estilos sobre los carteles del CCC */
+
+.carteles {
+    float: left;
+    margin: 5px;
+}
+
+.carteles img {
+    width: 100px;
+}
+
+.carteles:hover {
+    -moz-transform: scale(5);
+    -webkit-transform: scale(5);
+    -moz-transition: -moz-transform 1s ease-in-out 0.5s;
+    -webkit-transition: -webkit-transform 1s ease-in-out 0.5s;
+}
+
+
+/* Estilos sobre las fotos de los viajes y certámenes */
+
+.galeria {
+    width: 200px;
+    float: left;
+    margin: 4.3px;
+}
+
+.galeria:hover {
+    -moz-transform: translateX(55px) translateY(30px) scaleX(3.5) scaley(3.5);
+    -webkit-transform: translateX(55px) translateY(30px) scaleX(3.5) scaley(3.5);
+    ;
+    -moz-transition: -moz-transform 1s ease-in-out 0.5s;
+    -webkit-transition: -webkit-transform 1s ease-in-out 0.5s;
+}
+
+
+/* Smartphones horizontal y tablets en vertical */
+
+@media screen and (max-width:1100px) {
+    #contenedor {
+        width: calc(100% - 15px);
+    }
+    header nav ul {
+        display: flex;
+    }
+    i.material-icons {
+        /*display: none;*/
+    }
+    .titulo {
+        margin-right: 1em;
+        font-size: 4vw;
+        line-height: 63px;
+        max-width: 67vw;
+        -webkit-transform: none;
+        -ms-transform: none;
+        -moz-transform: none;
+    }
+    #cabecera figure {
+        margin-right: 20px;
+        margin-left: 34px;
+    }
+    article figure {
+        float: none;
+    }
+    figure img {
+        width: 100%;
+        height: auto;
+    }
+    .asideweb {
+        display: none;
+    }
+    section,
+    section article,
+    article header {
+        width: calc(100% - 6px);
+    }
+    article header {
+        width: calc(100% - 20px);
+    }
+    footer {
+        width: 100%;
+    }
+}
+
+
+/*
+@media screen and (max-width:768px) {
+    header img {
+        width: 100%;
+        height: 100%;
+        left: -100%;
+        margin: 0;
+        position: fixed;
+    }
+    #contenedor {
+        width: 100%;
+    }
+    .foto-cabecera {
+        margin-bottom: 0;
+    }
+    nav {
+        position: fixed;
+        z-index: 2;
+    }
+    section {
+        width: 70%;
+        margin-top: 100px;
+    }
+    section article {
+        width: 98%;
+    }
+    time {
+        margin-left: 1%;
+    }
+    article header,
+    article figure {
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    article img {
+        width: 100%;
+        height: 100%;
+    }
+    article header h1 {
+        padding-left: 5px;
+    }
+    aside {
+        width: 24%;
+        float: left;
+        margin-top: 104.5px;
+    }
+    .icono-whatsapp {
+        display: block;
+        margin: auto;
+        width: 119px;
+        padding-top: 10px;
+    }
+    aside img {
+        width: 90%;
+    }
+    footer {
+        width: 100%;
+    }
+    .miembros {
+        width: 95%;
+        height: 95%;
+        float: left;
+        margin: 3px;
+        padding: 10px;
+        border: 1px solid goldenrod;
+    }
+    .carteles {
+        float: left;
+        margin: 5px;
+    }
+    .carteles img {
+        width: 95%;
+    }
+    .carteles:hover {
+        -moz-transform: initial;
+        -webkit-transform: initial;
+        -moz-transition: initial;
+        -webkit-transition: initial;
+    }
+    .galeria {
+        width: 95%;
+        height: 95%;
+        float: left;
+        margin: 5px;
+    }
+    .galeria:hover {
+        -moz-transform: initial;
+        -webkit-transform: initial;
+        -moz-transition: initial;
+        -webkit-transition: initial;
+    }
+}
+*/
+
+
+/* Smartphones en vertical */
+
+@media screen and (max-width: 450px) {
+    body {
+        font-size: 0.8em;
+    }
+    header#cabecera figure {
+        display: none;
+    }
+    .foto-cabecera {
+        margin-bottom: 0;
+    }
+    .titulo {
+        font-size: 14pt;
+        position: relative;
+        top: -4px;
+        left: -20px;
+        text-align: left;
+        font-weight: bold;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    #titulo-nav {
+        font-size: 12pt;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .menu_bar {
+        display: flex;
+        flex-flow: row;
+    }
+    header nav ul li .children {
+        display: none;
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+        background-color: #ffffff;
+    }
+    article header {
+        width: calc(100% - 20px);
+    }
+    article header h1 {
+        font-size: 1.1em;
+        letter-spacing: 2px
+    }
+    article audio {
+        width: 75%;
+    }
+    article video {
+        width: 75%;
+    }
+    section {
+        width: 100%;
+        margin-top: 0px;
+    }
+    .asideweb {
+        display: none;
+    }
+    .asidemobile {
+        display: none;
+        margin-top: 100px;
+        border: none;
+    }
+    aside {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+        position: relative;
+        float: right;
+        order: 2;
+    }
+    .paginacion {
+        padding-top: 0;
+        position: relative;
+        float: left;
+        order: 1;
+    }
+    .paginacion ul {
+        text-align: center;
+    }
+    .miembros {
+        width: 95%;
+        height: 95%;
+        float: left;
+        margin: 3px;
+        padding: 10px;
+        border: 1px solid goldenrod;
+    }
+    .carteles {
+        float: left;
+        margin: 5px;
+    }
+    .carteles img {
+        width: 95%;
+    }
+    .carteles:hover {
+        -moz-transform: initial;
+        -webkit-transform: initial;
+        -moz-transition: initial;
+        -webkit-transition: initial;
+    }
+    .galeria {
+        width: 95%;
+        height: 95%;
+        float: left;
+        margin: 5px;
+    }
+    .galeria:hover {
+        -moz-transform: initial;
+        -webkit-transform: initial;
+        -moz-transition: initial;
+        -webkit-transition: initial;
+    }
+    /* Creación del menú responsive */
+    header nav {
+        width: 300px;
+        left: -100%;
+        margin: 0;
+        position: fixed;
+        z-index: 2;
+    }
+    header nav ul li {
+        display: block;
+        float: none;
+        border-bottom: 1px solid rgba(255, 255, 255, .3);
+    }
+    .menu_bar {
+        width: 100%;
+        background: #e8ad00;
+        position: fixed;
+        z-index: 3;
+        min-height: 40px;
+    }
+    .menu_bar .bt-menu {
+        display: block;
+        padding: 0 20px;
+        background-color: #e8ad00;
+        color: #013850;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 25px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 12vh;
+        position: relative;
+        left: -10px;
+    }
+    .menu_bar span {
+        float: right;
+        font-size: 40px;
+    }
+    nav {
+        padding-top: 80px;
+    }
+    header nav ul {
+        padding: 0;
+        box-shadow: 1px 2px 8px -2px black;
+        display: block;
+    }
+    section {
+        width: 100%;
+        padding-top: 80px;
+    }
+    .bt-menu>i.material-icons {
+        line-height: 87px;
+    }
+    nav ul li a i.material-icons {
+        display: inline-block;
+    }
+}
